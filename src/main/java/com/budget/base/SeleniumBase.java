@@ -168,7 +168,7 @@ public class SeleniumBase extends ReporterBase implements BrowserBase, ElementBa
 	@SuppressWarnings("deprecation")
 	public void click(WebElement ele) {
 		String text = "";
-		new WebDriverWait(driver, 60).until(ExpectedConditions.elementToBeClickable(ele));
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(ele));
 		try {
 			ele.click();
 			reportStep("The element " + text + " is clicked", "PASS");
